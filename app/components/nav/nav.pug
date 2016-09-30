@@ -1,0 +1,11 @@
+-
+	list = [
+			{name: "Home", url: "#home"}, 
+			{name: "About", url: "#about"}, 
+			{name: "Contact", url: "#contact"}
+		]
+
+nav
+	each item in list
+		li
+			a(href=item.url)= item.name
