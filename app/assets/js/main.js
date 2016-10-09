@@ -1,25 +1,10 @@
 'use strict';
 
-var myModule = (function(){
 
-	var init = function(){
-		console.log('This script is done');
-	};
+//Compare the text forwards and backwards 
+//IF both are equals return true if NOT return false
 
-	var logSomething = function(txt){
-		console.log(txt);
-	};
+var isPalindrome = (txt) => 
+	txt.prepTxt() === [...txt.prepTxt()].reverse().join('');
 
-
-	var alertSomething = function(txt){
-		alert(txt);
-	};
-
-	init();
-
-	return {
-		logSomething: logSomething,
-		alertSomething: alertSomething
-	}
-
-})();
+const prepTxt = txt => txt.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
